@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucloud.test.demo.mapper.AlertReceiverMapper">
+    <select id="Select" resultType="com.ucloud.test.demo.entity.AlertReceiver">
+        select * from alert_receiver where id = #{id}
+    </select>
+
+    <select id="SelectAll" resultType="com.ucloud.test.demo.entity.AlertReceiver">
+        SELECT * from alert_receiver
+    </select>
+
+    <insert id="Insert" parameterType="com.ucloud.test.demo.entity.AlertReceiver" keyProperty="id">
+        INSERT INTO alert_receiver(
+            id, name, phone, mail
+        )
+        VALUES(
+            #{id},
+            #{name, jdbcType=VARCHAR},
+            #{phone},
+            #{mail, jdbcType=VARCHAR}
+        )
+    </insert>
+</mapper>

@@ -1,0 +1,20 @@
+CREATE DATABASE demo;
+
+CREATE TABLE `alert_receiver` (
+	`id` INT(32) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(32) NOT NULL,
+	`phone` BIGINT(11) NOT NULL,
+	`mail` VARCHAR(32) NOT NULL,
+	PRIMARY KEY(`id`)
+)DEFAULT CHARSET=utf8;
+
+SELECT * FROM alert_receiver WHERE id = 1;
+
+
+CREATE TABLE `alert_rules` (
+	`id` INT(32) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(32) NOT NULL,
+	`rules` VARCHAR NOT NULL,
+	`mail` VARCHAR(32) NOT NULL,
+	PRIMARY KEY(`id`)
+)DEFAULT CHARSET=utf8;
